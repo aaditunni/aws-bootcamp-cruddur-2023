@@ -11,32 +11,32 @@ Then I recreated the Recreate Conceptual Diagram and the Logical Architectural D
 
 Recreate Conceptual Diagram:
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/Conceptual%20Diagram.jpeg)
 
 [Lucid Charts link](https://lucid.app/lucidchart/3d7d91bb-21d0-4f55-94cf-d8ae22e8d150/edit?invitationId=inv_10a7c99c-ffd9-4dd0-91d8-6da8bdbfea2a)
 
 
 Logical Architectural Diagram: 
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/Logical%20Architectual%20Diagram.jpeg)
 
 [Lucid Charts link](https://lucid.app/lucidchart/fa535cbe-efae-46a4-bec7-2b3d860f250c/edit?invitationId=inv_6e43d437-a391-4d40-a3f9-edc3f1014f03)
 
 Once I was done with that, I went to the AWS console and created an IAM user with admin privileges. I already have an AWS account and an IAM user with admin privileges that I use to experiment an learn. I created a new one specifically for the bootcamp. After creating the user, I enabled MFA as well.
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/user.JPG)
 
 Then I checked out CloudShell.
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/cloudshell.JPG)
 
 I used the AWS console to generate Access Key.
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/credentials.JPG)
 
 I used the GitPod integration in my GitGub to take me directly to the GitHub Workspace and updated the yaml file to add the task that automatically installs AWS cli each time I open the GitPod workspace.
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/cli.JPG)
 
 I used these commands to set these credentials for the current bash terminal:
 ```
@@ -56,16 +56,16 @@ Then I used the AWS console to create two Budgets.
 One Monthly Cost Budget with 3 Alerts. 
 Alerts: When the Actual cost is greater than 85% of the budgeted amount (10$), when the Actual cost is greater than 100% of the budgeted amount (10$), when the forecasted cost is greater than 100% of the budgeted amount (10$).
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/cost%20budget.JPG)
 
 One Monthly Credit Budget with 3 Alerts. 
 Alerts: When the Actual credit usage is greater than 85% of the budgeted amount (10$), when the Actual credit usage is greater than 100% of the budgeted amount (10$), when the forecasted credit usage is greater than 100% of the budgeted amount (10$).
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/credit%20budget.JPG)
 
 Later, I created a CloudWatch Billing Alert which sends an Email notification through SNS when the Estimated Charges Threshold is greater than 10$.
 
-![Screenshot](https://via.placeholder.com/500x300)
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/billing%20alert.JPG)
 
 
 ## Homework Challenges
