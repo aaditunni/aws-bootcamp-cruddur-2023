@@ -3,6 +3,8 @@
 ## Required Homework
 I completed all the required tasks in the TODO list in the Students Portal. Here is a breakdown of all the things I did.
 
+![Screenshot](https://github.com/aaditunni/aws-bootcamp-cruddur-2023/blob/main/journal/week0/todolist.JPG)
+
 Firstly, I had already set up all the prerequisites that was told to do so like setting up Gitpod, Lucid charts, etc
 
 I watched all the videos in the playlist and understood what the Week 0 is all about since I missed the live class. These include the recording of the live class, video about pricing and free tier by Chirag Nayyar, video by Ashish Rajan/Cloud Security Podcast and all the extra videos by Andrew.
