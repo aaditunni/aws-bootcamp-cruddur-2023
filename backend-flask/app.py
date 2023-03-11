@@ -71,7 +71,7 @@ tracer = trace.get_tracer(__name__)
 app = Flask(__name__)
 
 cognito_jwt_token = CognitoJwtToken(
-  user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"), 
+  user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"),
   user_pool_client_id=os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID"),
   region=os.getenv("AWS_DEFAULT_REGION")
 )
@@ -165,17 +165,17 @@ def data_create_message():
 def data_home():
   access_token = extract_access_token(request.headers)
   try:
-      claims = cognito_jwt_token.verify(access_token)
-      # authenticated request
-      app.logger.debug('authenticated')
-      app.logger.debug(claims)
-      app.logger.debug(claims['username'])
-      data = HomeActivities.run(cognito_user_id=claims['username']) 
+    claims = cognito_jwt_token.verify(access_token)
+    # authenticated requests
+    app.logger.debug("authenticated")
+    app.logger.debug(claims)
+    app.logger.debug(claims['username'])
+    data = HomeActivities.run(cognito_user_id=claims['username'])
   except TokenVerifyError as e:
-      # unauthenticated request
-      app.logger.debug(e)
-      app.logger.debug('unauthenticated')
-      data = HomeActivities.run()
+     # unauthenticated requests
+    app.logger.debug(e)
+    app.logger.debug("unauthenticated")
+    data = HomeActivities.run()
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
