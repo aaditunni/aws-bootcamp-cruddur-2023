@@ -4,7 +4,6 @@ from flask_cors import CORS, cross_origin
 import os
 import sys
 
-
 from services.home_activities import *
 from services.notifications_activities import *
 from services.user_activities import *
@@ -16,7 +15,7 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
-from lib.cognito_jwt_token import CognitoJwtToken, TokenVerifyError
+from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
 
 # HoneyComb ------------
 from opentelemetry import trace
@@ -173,7 +172,6 @@ def data_home():
       app.logger.debug(claims['username'])
       data = HomeActivities.run(cognito_user_id=claims['username']) 
   except TokenVerifyError as e:
-      _ = request.data
       # unauthenticated request
       app.logger.debug(e)
       app.logger.debug('unauthenticated')
