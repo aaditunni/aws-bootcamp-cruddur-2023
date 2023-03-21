@@ -58,7 +58,7 @@ export default function HomeFeedPage() {
     })
     .catch((err) => console.log(err));
   };
-
+  
   React.useEffect(()=>{
     //prevents double call
     if (dataFetchedRef.current) return;
@@ -72,8 +72,7 @@ export default function HomeFeedPage() {
     <article>
       <DesktopNavigation user={user} active={'home'} setPopped={setPopped} />
       <div className='content'>
-        <ActivityForm 
-          user_handle={user}
+        <ActivityForm  
           popped={popped}
           setPopped={setPopped} 
           setActivities={setActivities} 
