@@ -1,16 +1,12 @@
 import './HomeFeedPage.css';
 import React from "react";
 
-import { Auth } from 'aws-amplify';
-
 import DesktopNavigation  from '../components/DesktopNavigation';
 import DesktopSidebar     from '../components/DesktopSidebar';
 import ActivityFeed from '../components/ActivityFeed';
 import ActivityForm from '../components/ActivityForm';
 import ReplyForm from '../components/ReplyForm';
-
-// [TODO] Authenication
-import Cookies from 'js-cookie'
+import checkAuth from '../lib/CheckAuth';
 
 export default function HomeFeedPage() {
   const [activities, setActivities] = React.useState([]);
@@ -65,7 +61,7 @@ export default function HomeFeedPage() {
     dataFetchedRef.current = true;
 
     loadData();
-    checkAuth();
+    checkAuth(setUser);
   }, [])
 
   return (
